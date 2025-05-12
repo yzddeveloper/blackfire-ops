@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0d0d0d, #0d0d0def);
+    color: white;
+}
+
+/* NAV MENU DESKTOP */
+
+nav {
+    background-color: #0d0d0d;
+    padding: 5px;
+}
+
+.nav-menu-desktop img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-menu-desktop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-menu-desktop li {
+    position: relative;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-menu-desktop>ul>li {
+    padding: 15px;
+}
+
+.nav-menu-desktop>ul>li:hover {
+    border-bottom: 3px solid #ff4d4d;
+}
+
+.nav-menu-desktop a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Submenu */
+.nav-menu-desktop li ul {
+    display: none;
+    position: absolute;
+    margin-top: 45px;
+    top: 0;
+    background-color: #0d0d0d;
+    width: 200px;
+    text-align: center;
+}
+
+.nav-menu-desktop li:hover>ul {
+    display: block;
+}
+
+.nav-menu-desktop li ul li {
+    border-bottom: 1px solid #444;
+}
+
+/* Submenu */
+
+/* NAV MENU DESKTOP */
+
+
+
+li a:hover {
+    color: #ff4d4d;
+}
+
+
+
+/* NAV MENU MOBILE */
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-menu-mobile {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100vh;
+    background-color: #0d0d0d;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.nav-menu-mobile img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+.nav-menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu-mobile li {
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-menu-mobile li:hover {
+    border-bottom: 2px solid #ff4d4d;
+    color: #ff4d4d;
+}
+
+.nav-menu-mobile a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu-mobile.active {
+    left: 0;
+}
+
+/* NAV MENU MOBILE */
+
+/* HEADER */
+
+header {
+    background: url('Thumnail\ Website.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+header img {
+    width: 230px;
+    height: auto;
+}
+
+header p {
+    margin: 15px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* HEADER */
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.cta-btn {
+    background: #ff4d4d;
+    box-shadow: 0 0 0 3px #0d0d0d44;
+    border: 1px solid white;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.cta-btn:hover {
+    background: white;
+    border: 1px solid white;
+    color: #0d0d0d;
+}
+
+section {
+    padding: 60px 20px;
+    margin: auto;
+}
+
+/* NEWS, GALLERY */
+
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* backgroud 1 */
+.backgroud-1 {
+    background-color: white;
+}
+
+.backgroud-1 h2 {
+    color: #130d2d;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: 25px;
+    margin-top: -40px;
+}
+
+.backgroud-1 p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #130d2d;
+    font-size: 14px;
+}
+
+.container-about-game {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+}
+
+.card-about-game {
+    border-bottom: 2px solid #130d2d;
+}
+
+.card-about-game h1 {
+    color: #130d2d;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.card-about-game img {
+    max-width: 700px;
+    height: auto;
+}
+
+/* backgroud 1 */
+
+/* backgroud 2 */
+.backgroud-2 {
+    background-color: #130d2d;
+}
+
+.backgroud-2 h2 {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: 25px;
+    margin-top: -40px;
+}
+
+/* backgroud 2 */
+
+/* backgroud 3 */
+.backgroud-3 {
+    background-color: white;
+}
+
+.backgroud-3 h2 {
+    color: #130d2d;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: 25px;
+    margin-top: -40px;
+}
+
+/* backgroud 3 */
+
+.news,
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.news,
+.screenshot {
+    border-radius: 8px;
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.news,
+.screenshot img {
+    width: 100%;
+}
+
+.hidden0,
+.hidden1,
+.hidden2 {
+    display: none;
+}
+
+.btn-showmore {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 15px 70px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: #0d0d0d;
+}
+
+#showMoreBtn2:hover {
+    background-color: #130d2d;
+    color: white;
+}
+
+#showMoreBtn0:hover {
+    background-color: #130d2d;
+    color: white;
+}
+
+/* NEWS, GALLERY */
+
+/* FOOTER */
+
+footer {
+    background: #ff4d4d;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer a {
+    color: #0d0d0d;
+    text-decoration: none;
+}
+
+.media-social {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.media-social img {
+    width: 30px;
+    height: 30px;
+}
+
+/* FOOTER */
+
+
+
+
+
+@media (min-width: 720px) {
+    .nav-menu-desktop {
+        display: block;
+    }
+
+    #nav-menu-mobile {
+        display: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+
+
+    .backgroud-1 p {
+        margin-top: 10px;
+        color: #0d0d0d;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .nav-menu-desktop {
+        display: none;
+    }
+
+    #nav-menu-mobile {
+        display: block;
+    }
+
+
+
+    .card-about-game h1 {
+        color: #130d2d;
+        font-size: 16px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 3px;
+        font-weight: normal;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .card-about-game img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media (width: 360px) {
+    .nav-menu-desktop {
+        display: none;
+    }
+
+    #nav-menu-mobile {
+        display: block;
+    }
+
+
+
+    .card-about-game h1 {
+        color: #130d2d;
+        font-size: 18px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 3px;
+        font-weight: normal;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .card-about-game img {
+        width: 280px;
+        height: auto;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 480px) {
+    .nav-menu-desktop {
+        display: none;
+    }
+
+    #nav-menu-mobile {
+        display: block;
+    }
+
+
+    .card-about-game h1 {
+        color: #130d2d;
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 3px;
+        font-weight: normal;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .card-about-game img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 926px) and (orientation: landscape) {
+    .nav-menu-desktop {
+        display: none;
+    }
+
+    #nav-menu-mobile {
+        display: block;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .nav-menu-mobile {
+        overflow-y: scroll;
+    }
+
+
+
+    .card-about-game h1 {
+        color: #130d2d;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 3px;
+        font-weight: normal;
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .card-about-game img {
+        width: 400px;
+        height: auto;
+    }
+}

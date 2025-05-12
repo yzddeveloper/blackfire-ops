@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-home.css">
+    <title>Blackfire Ops</title>
+</head>
+
+<body>
+    <nav class="nav-menu-desktop">
+        <ul>
+            <img src="BLACKFIRE-OPS.png" alt="">
+            <li><a href="#home">BERANDA</a></li>
+            <li><a href="#about">TENTANG</a></li>
+            <li><a href="#news">BERITA</a></li>
+            <li><a href="#screenshot-game">SCREENSHOT</a></li>
+            <li><a href="#">TOP UP</a></li>
+        </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+        <img src="hamburger.png" alt="Menu">
+    </div>
+
+    <nav class="nav-menu-mobile" id="nav-menu-mobile">
+        <ul>
+            <img src="BLACKFIRE-OPS.png" alt="">
+            <li><a href="#home">BERANDA</a></li>
+            <li><a href="#about">TENTANG</a></li>
+            <li><a href="#news">BERITA</a></li>
+            <li><a href="#screenshot-game">SCREENSHOT</a></li>
+            <li><a href="#">TOP UP</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <p>FPS taktis dengan aksi cepat dan gameplay intens</p>
+        <img src="BLACKFIRE-OPS.png" alt="">
+        <a href="#download" class="cta-btn">MAIN GRATIS</a>
+    </header>
+
+    <section class="backgroud-1 card">
+        <h2 id="about">TENTANG GAME</h2>
+        <div class="container-about-game">
+            <div class="card-about-game">
+                <img src="Screenshot About Game.jpeg" alt="">
+                <h1>BLACKFIRE OPS</h1>
+                <p>Blackfire Ops adalah game FPS kompetitif dengan berbagai mode seru, senjata realistis, dan arena
+                    tempur futuristik.</p>
+            </div>
+            <div class="card-about-game">
+                <img src="Screenshot Death Match.png" alt="">
+                <h1>DEATH MATCH</h1>
+                <p>Mode Death Match adalah mode pertempuran bebas di mana semua pemain bertarung satu sama lain atau
+                    dalam tim. Tujuannya adalah mengumpulkan jumlah eliminasi tertinggi dalam batas waktu yang telah
+                    ditentukan.</p>
+            </div>
+            <div class="card-about-game">
+                <img src="Screenshot Bomb Match.png" alt="">
+                <h1>BOMB MATCH</h1>
+                <p>Dalam mode Bomb Match, dua tim saling bertanding dengan objektif utama menanam dan meledakkan bom
+                    (tim penyerang) atau mencegahnya (tim bertahan).</p>
+            </div>
+            <div class="card-about-game">
+                <img src="Screenshot Destroy Mission.png" alt="">
+                <h1>DESTROY MISSION</h1>
+                <p>Destroy Mission adalah mode misi taktis di mana satu tim ditugaskan untuk menghancurkan target
+                    tertentu seperti kendaraan, struktur, atau fasilitas, sementara tim lawan harus mempertahankannya.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="backgroud-2 card">
+        <h2 id="news">BERITA</h2>
+        <div class="news">
+            <div class="screenshot"><img src="Screenshot Event 5.png" alt="Screenshot Event 5"></div>
+            <div class="screenshot"><img src="Screenshot Event 4.png" alt="Screenshot Event 4"></div>
+            <div class="screenshot"><img src="Screenshot Event 3.png" alt="Screenshot Event 3"></div>
+            <div class="screenshot hidden1"><img src="Screenshot Event 2.png" alt="Screenshot Event 1"></div>
+            <div class="screenshot hidden1"><img src="Screenshot Event 1.png" alt="Screenshot Event 1"></div>
+        </div>
+        <div class="btn-showmore">
+            <button id="showMoreBtn1" onclick="showMore1()">VIEW ALL</button>
+        </div>
+    </section>
+
+    <section class="backgroud-3 card">
+        <h2 id="screenshot-game">SCREENSHOT</h2>
+        <div class="gallery">
+            <div class="screenshot"><img src="Screenshot 1.jpeg" alt="Screenshot 1"></div>
+            <div class="screenshot"><img src="Screenshot 2.jpeg" alt="Screenshot 2"></div>
+            <div class="screenshot"><img src="Screenshot 3.jpeg" alt="Screenshot 3"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 4.jpeg" alt="Screenshot 4"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 5.jpeg" alt="Screenshot 5"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 6.jpeg" alt="Screenshot 6"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 7.jpeg" alt="Screenshot 7"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 8.jpeg" alt="Screenshot 8"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 9.jpeg" alt="Screenshot 9"></div>
+            <div class="screenshot hidden2"><img src="Screenshot 10.jpeg" alt="Screenshot 10"></div>
+        </div>
+        <div class="btn-showmore">
+            <button id="showMoreBtn2" onclick="showMore2()">VIEW ALL</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Blackfire Ops. Dikembangkan oleh YZD Dev. <br>
+            <a href="mailto:support@blackfireops.com">Kontak</a> | <a href="#">Privasi</a> | <a href="#">Syarat</a>
+        </p>
+        <div class="media-social">
+            <a href=""><img src="facebook.png" alt=""></a>
+            <a href=""><img src="instagram.png" alt=""></a>
+            <a href=""><img src="twitter.png" alt=""></a>
+            <a href=""><img src="discord.png" alt=""></a>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu-mobile');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+
+    <script src="showmore.js"></script>
+</body>
+
+</html>
